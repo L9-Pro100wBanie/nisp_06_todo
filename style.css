@@ -52,3 +52,21 @@ body {
 	max-width: 400px; /* żeby lista nie była zbyt szeroka na dużych ekranach */
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* delikatny cień dla efektu głębi */
 }
+/* Wygląd ukończonego zadania (Zadanie 4) */
+.completed {
+	text-decoration: line-through;
+	color: #888; /* Zmieniamy kolor na szary, żeby zadanie wyglądało na nieaktywne */
+}
+
+/* Odsunięcie tekstu od checkboxa */
+#task-list input[type="checkbox"] {
+	margin-right: 12px;
+	cursor: pointer;
+	transform: scale(1.2); /* Lekkie powiększenie checkboxa dla wygody klikania */
+}
+
+/* Opcjonalnie: wyrównanie w pionie elementów wewnątrz li */
+#task-list li {
+	display: flex;
+	align-items: center;
+}
