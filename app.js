@@ -3,7 +3,7 @@ const inputField = document.getElementById("task-input");
 const addButton = document.getElementById("add-btn");
 const taskList = document.getElementById("task-list");
 
-// Obsługa zdarzenia kliknięcia przycisku
+// Obsługa zdarzenia kliknięcia przycisku "Dodaj"
 addButton.addEventListener("click", function () {
 	const taskText = inputField.value;
 
@@ -13,28 +13,36 @@ addButton.addEventListener("click", function () {
 		// 1. Tworzenie checkboxa
 		const checkbox = document.createElement("input");
 		checkbox.type = "checkbox";
-
-		// 2. Obsługa zaznaczania checkboxa (Zadanie 4)
 		checkbox.addEventListener("change", function () {
 			if (this.checked) {
-				// Jeśli zaznaczony, dodaj klasę 'completed'
 				newListItem.classList.add("completed");
 			} else {
-				// Jeśli odznaczony, usuń klasę 'completed'
 				newListItem.classList.remove("completed");
 			}
 		});
-
-		// 3. Dodanie checkboxa i tekstu do elementu 'li'
 		newListItem.appendChild(checkbox);
 
-		// Tworzymy węzeł tekstowy ze spacją, żeby tekst nie przykleił się do checkboxa
+		// 2. Dodanie tekstu zadania
 		const textNode = document.createTextNode(" " + taskText);
 		newListItem.appendChild(textNode);
 
-		// 4. Dodanie całego elementu do listy
+		// 3. Tworzenie przycisku "Usuń" (Zadanie 5)
+		const deleteButton = document.createElement("button");
+		deleteButton.textContent = "Usuń";
+		deleteButton.classList.add("delete-btn"); // Dodajemy klasę dla CSS
+
+		// Obsługa kliknięcia w "Usuń"
+		deleteButton.addEventListener("click", function () {
+			newListItem.remove(); // Ta funkcja usuwa nasz element li z listy
+		});
+
+		// Dodanie przycisku do zadania
+		newListItem.appendChild(deleteButton);
+
+		// 4. Dodanie całości (checkbox + tekst + przycisk) do listy na stronie
 		taskList.appendChild(newListItem);
 
+		// Wyczyszczenie pola po dodaniu
 		inputField.value = "";
 	}
 });
