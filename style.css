@@ -100,3 +100,27 @@ body {
 	margin: 20px auto;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+/* Styl dla zadania wyłowionego co 10 ryb */
+.task-yellow {
+	background-color: #fff9c4 !important; /* Jasnożółty */
+	border-color: #fbc02d !important;
+}
+
+/* Unikalny styl dla legendarnego zadania 67 - wyższy priorytet */
+.task-67 {
+	background: linear-gradient(45deg, #ffd700, #ff8c00) !important;
+	color: white !important;
+	border: 2px solid #b8860b !important;
+	font-weight: bold;
+	box-shadow: 0 0 15px rgba(255, 215, 0, 0.6) !important;
+	animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+	from {
+		box-shadow: 0 0 5px #ffd700;
+	}
+	to {
+		box-shadow: 0 0 20px #ff8c00;
+	}
+}
