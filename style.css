@@ -1,0 +1,54 @@
+/* Zmiana czcionki, koloru tła i wyśrodkowanie zawartości */
+body {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	background-color: #f0f4f8; /* delikatny szaro-niebieski kolor tła */
+	color: #333;
+	text-align: center; /* wyśrodkowanie tekstu i elementów wewnątrz (inline) */
+	padding: 40px;
+	margin: 0;
+}
+
+/* Lekkie upiększenie formularza (opcjonalnie, dla lepszego efektu) */
+#task-input {
+	padding: 10px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	width: 250px;
+}
+
+#add-btn {
+	padding: 10px 15px;
+	font-size: 16px;
+	background-color: #28a745; /* zielony przycisk */
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#add-btn:hover {
+	background-color: #218838; /* ciemniejszy zielony po najechaniu */
+}
+
+/* Stylowanie listy zadań */
+#task-list {
+	list-style-type: none; /* usuwamy domyślne czarne kropki z listy */
+	padding: 0;
+	margin-top: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center; /* wyśrodkowanie samych kafelków z zadaniami */
+}
+
+/* Stylowanie pojedynczego zadania (elementu li) */
+#task-list li {
+	background-color: white;
+	border: 1px solid #ddd; /* obramowanie */
+	border-radius: 8px; /* zaokrąglone rogi */
+	padding: 15px;
+	margin-bottom: 12px; /* odstępy między elementami */
+	width: 100%;
+	max-width: 400px; /* żeby lista nie była zbyt szeroka na dużych ekranach */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* delikatny cień dla efektu głębi */
+}
